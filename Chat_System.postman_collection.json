@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "5a7afbf4-269e-49a7-920b-f1b4969ce559",
+		"name": "Chat_System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "CreateApp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Application1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/applications",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAppByToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllApps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateApp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"updated Application\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "CreateChat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllChats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetChatByNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "CreateMsg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\": \"chat system application\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats/1/messages",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats",
+								"1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllMsgs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats/1/messages",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats",
+								"1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ElasticSearch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/chats/messages/app-token/8cfc2f7d-253d-41ad-87b4-3220858dc079/chat-number/1/elastic-search?message=icat",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"chats",
+								"messages",
+								"app-token",
+								"8cfc2f7d-253d-41ad-87b4-3220858dc079",
+								"chat-number",
+								"1",
+								"elastic-search"
+							],
+							"query": [
+								{
+									"key": "message",
+									"value": "icat"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMsgByNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats/1/messages/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats",
+								"1",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMsg",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\":\"new hello message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}/applications/94Rhvro9KInqij1H/chats/1/messages/1",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"applications",
+								"94Rhvro9KInqij1H",
+								"chats",
+								"1",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"disabled": true
+		},
+		{
+			"key": "local",
+			"value": "http://localhost:3000"
+		}
+	]
+}
