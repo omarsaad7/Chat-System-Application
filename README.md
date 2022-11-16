@@ -12,16 +12,18 @@ You can use this postman [collection](Chat_System.postman_collection) for all th
 
 * Ruby
 * Rails
-* Mysql
+* Mysql <br />
   -Used as main datastore.
-* Redis
+* Redis <br />
   -Used for caching.
-* Elastic Search
+* Elastic Search <br />
   -Used for partially matching messages.
-* Sidekiq
+* Sidekiq <br />
   -Used as queuing system to avoid writing directly to the database.(used in creating chats and messages).
-* Rufus
+* Rufus <br />
   -Used for scheduling a job every 10 mins to update chats_count and messages_count.
+* Docker <br />
+  -Used to containerize the app.
 
 ## Run and test app on your local machine
 
@@ -35,7 +37,7 @@ Clone the repo
 ```
 git clone https://github.com/omarsaad7/Chat-System-Application.git
 ```
-#### Run All services usinf docker
+#### Run All services using docker
 Get inside Application folder
 ```
 cd Chat-System-Application
