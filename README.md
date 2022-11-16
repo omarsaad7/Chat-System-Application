@@ -6,7 +6,7 @@ This is a Chat System. The system allows creating new applications where each ap
 
 ### API Reference
 
-You can use this postman [collection](Chat_System.postman_collection) for all the backend apis used.
+You can use this postman [collection](Chat_System.postman_collection.json) for all the backend apis used.
 
 ### Built With
 
